@@ -1,0 +1,92 @@
+{
+  "catalog": [
+    {
+      "type": "sdmx-group",
+      "id": "pacific-data-hub-sdmx",
+      "name": "Pacific Data Hub .Stat",
+      "url": "https://stats-sdmx-disseminate.pacificdata.org/rest",
+      "excludeMembers": [
+        // Exclude Key facts - only has string observable values - Terria doesn't support this
+        "//Pacific Data Hub .Stat/dataflow-DF_KEYFACTS",
+        // Exclude food nutrient data - has no regions
+        "//Pacific Data Hub .Stat/dataflow-DF_FOOD_NUTRIENTS",
+        // Exclude health indicators - has conflicting dimensions - https://github.com/PacificCommunity/Terria-PacificMap/issues/69
+        "//Pacific Data Hub .Stat/dataflow-DF_HEALTH",
+        // Exlucde Violence aigainst women - same reason as above
+        "//Pacific Data Hub .Stat/dataflow-DF_VAW",
+        // Remove hidden group which adds info to dataflows
+        "spc-sdmx-hidden-group"
+      ],
+      "shareKeys": [
+        "//Pacific Data Hub .Stat"
+      ],
+      // This is used to override dataflow properties without having to re-create group structure - this group is hidden from view
+      "members": [
+        {
+          "id": "spc-sdmx-hidden-group",
+          "type": "group",
+          "members": [
+            // National Minimum Development Indicators (NMDI) - All indicators=
+            // Disable problematic "Frequency" dimension
+            {
+              "id": "//Pacific Data Hub .Stat/dataflow-DF_NMDI",
+              "type": "sdmx-json",
+              "modelOverrides": [
+                {
+                  "id": "urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SPC:CL_COM_FREQ(1.0)",
+                  "allowUndefined": true,
+                  "disable": true
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "modelOverrides": [
+        // Set reigon mapping
+        {
+          "id": "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SPC:CS_COMMON(2.0).GEO_PICT",
+          "type": "region",
+          "regionType": "ISO2_EEZ_CODE"
+        },
+        // Allow undefined for problematic composite breakdown dimension
+        {
+          "id": "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SPC:CS_COMMON(2.0).COMPOSITE_BREAKDOWN",
+          "allowUndefined": true
+        },
+        // Disable some topic dimensions that don't do anything
+        {
+          "id": "urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SPC:CL_HEALTH_TOPICS(1.0)",
+          "allowUndefined": true,
+          "disable": true
+        },
+        {
+          "id": "urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SPC:CL_ENERGY_TOPICS(1.0)",
+          "allowUndefined": true,
+          "disable": true
+        },
+        // Set some good default values
+        {
+          "id": "urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SPC:CL_OVERSEAS_VISITORS_TYPE(2.0)",
+          "selectedId": "_T"
+        },
+        {
+          "id": "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SPC:CS_COMMON(2.0).COUNTERPART",
+          "selectedId": "_T"
+        },
+        {
+          "id": "urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SPC:CL_COM_TRANSFORMATION(1.0)",
+          "selectedId": "YM1"
+        },
+        {
+          "id": "urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SPC:CL_POP_URBAN_INDICATORS(1.0)",
+          "selectedId": "POPAFCOU"
+        },
+        {
+          "id": "urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SPC:CL_COM_ELEVATION(1.0)",
+          "selectedId": "10M"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+version: '3'
+services:
+    pacificmap:
+      container_name: terriamap
+      image: "pacificmap:${PDHMAP_VER}"
+      ports:
+        - "3001:3001"
+      restart: on-failure
