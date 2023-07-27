@@ -16,9 +16,17 @@
       "bucket": "pacificmap-sharing",
       "accessKeyId": "XXXX",
       "secretAccessKey": "xxxx"
+    },
+    "g": {
+      "service": "gist",
+      "accessToken": "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",
+      "userAgent": "PacificMap TerriaJS",
+      "gistFilename": "sharedb.json"
     }
   },
-  "newShareUrlPrefix": "s",
+  "newShareUrlPrefix": "g",
+  "shareMaxRequestSize": "200kb",
+  "hostName": "map-uat.pacificdata.org",
   "allowProxyFor": [
     "nicta.com.au",
     "gov.au",

@@ -2,6 +2,7 @@
   "initializationUrls": ["pdh-catalog"],
   "parameters": {
     "appName": "Pacific Map (UAT)",
+    "aboutButtonHrefUrl": "https://docs.pacificdata.org/pacific-map",
     "bingMapsKey": "AkvokU3bNQqowYd3y9JbhfrYagiuUAbAvVMliflZgApEHmP_MR39sjuIiD9b-i-L",
     "brandBarElements": [
       "<a target=\"_blank\" href=\"https://pacificdata.org\"><img src=\"images/spc_data_hub_logo.svg\" style=\"width:100px;padding-left:5px;\" title=\"Pacific Data Hub\" /></a>",
@@ -83,7 +84,7 @@
         "itemName": "mapuserguide",
         "title": "translate#helpPanel.mapUserGuide",
         "paneMode": "externalLink",
-        "url": "https://terriajs.gitbook.io/terriajs/"
+        "url": "https://userguide.terria.io/"
       }
     ],
     "languageConfiguration": {
@@ -100,7 +101,7 @@
     "proj4ServiceBaseUrl": "proj4def/",
     "regionMappingDefinitionsUrl": "extra/regionMapping.json",
     "relatedMaps": [],
-    "showWelcomeMessage": true,
+    "showWelcomeMessage": false,
     "storyRouteUrlPrefix": "https://map-uat.pacificdata.org/share/s-",
     "supportEmail": "pdh-support@spc.int",
     "theme": {
