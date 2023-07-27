@@ -1,13 +1,6 @@
 {
   "initializationUrls": ["pdh-catalog"],
   "parameters": {
-    "googleUrlShortenerKey": null,
-    "googleAnalyticsKey": null,
-    "googleAnalyticsOptions": null,
-    "disclaimer": {
-      "text": "Disclaimer: This map must not be used for navigation or precise spatial analysis",
-      "url": ""
-    },
     "appName": "Pacific Map (UAT)",
     "bingMapsKey": "AkvokU3bNQqowYd3y9JbhfrYagiuUAbAvVMliflZgApEHmP_MR39sjuIiD9b-i-L",
     "brandBarElements": [
@@ -16,24 +9,19 @@
     ],
     "cesiumIonAccessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2NzE3NWVlYy00YWIzLTQ3ZDItOTJhOS1hYTRhN2ExMTFlYmYiLCJpZCI6Mjk5MiwiaWF0IjoxNjIyNTA1NjExfQ.CusV1Gnck16-WTZZjcR35EBGj1jWwGxOaomjytK60SA",
     "corsProxyBaseUrl": "/proxy/",
+    "developerAttribution": {
+      "link": "https://terria.io",
+      "text": "Terria Team at CSIRO's Data61"
+    },
     "disclaimer": {
       "text": "Disclaimer: This map must not be used for navigation or precise spatial analysis",
-      "url": "http://google.com"
+      "url": "http://pacificdata.org"
     },
-    "feedbackUrl": "feedback",
-    "supportEmail": "pdh-support@spc.int",
-    "proj4ServiceBaseUrl": "proj4def/",
-    "mobileDefaultViewerMode": "2d",
     "experimentalFeatures": true,
-    "languageConfiguration": {
-      "enabled": true,
-      "debug": false,
-      "languages": {
-        "en": "English",
-        "fr": "Français"
-      },
-      "fallbackLanguage": "en"
-    },
+    "feedbackUrl": "feedback",
+    "googleUrlShortenerKey": null,
+    "googleAnalyticsKey": null,
+    "googleAnalyticsOptions": null,
     "helpContent": [
       {
         "icon": "video",
@@ -97,6 +85,66 @@
         "paneMode": "externalLink",
         "url": "https://terriajs.gitbook.io/terriajs/"
       }
-    ]
+    ],
+    "languageConfiguration": {
+      "debug": false,
+      "enabled": true,
+      "fallbackLanguage": "en",
+      "languages": {
+        "en": "English",
+        "fr": "Français"
+      }
+    },
+    "leafletAttributionPrefix": "<a href=\"https://leafletjs.com\" title=\"A JavaScript library for interactive maps\">Leaflet</a>",
+    "mobileDefaultViewerMode": "2d",
+    "proj4ServiceBaseUrl": "proj4def/",
+    "regionMappingDefinitionsUrl": "extra/regionMapping.json",
+    "relatedMaps": [],
+    "showWelcomeMessage": true,
+    "storyRouteUrlPrefix": "https://map-uat.pacificdata.org/share/s-",
+    "supportEmail": "pdh-support@spc.int",
+    "theme": {
+      "charcoalGrey": "#3f4854",
+      "colorPrimary": "#007ad8",
+      "colorSplitter": "#ff6f00",
+      "compassWidth": "56",
+      "dark": "#33404a",
+      "darkWithOverlay": "#5d7486",
+      "frontComponentZIndex": "99",
+      "grey": "#888888",
+      "greyLighter": "#ddd",
+      "greyLighter2": "#e6e6e6",
+      "greyLightest": "#f2f2f2",
+      "lg": "1300",
+      "mapButtonColor": "#9ca1aa",
+      "mapButtonTop": "18",
+      "mapNavigationTop": "80",
+      "md": "992",
+      "mobile": "767",
+      "modalBg": "#fff",
+      "modalHighlight": "#007ad8",
+      "modalText": "#000",
+      "overlay": "rgba(255, 255, 255, 0.15)",
+      "overlayInvert": "rgba(255, 255, 255, 0.85)",
+      "radius40Button": "20",
+      "radiusLarge": "4px",
+      "radiusSmall": "2px",
+      "ringWidth": "10",
+      "sm": "768",
+      "spacing": "5",
+      "textBlack": "#000",
+      "textDark": "#595b60",
+      "textDarker": "#4d5766",
+      "textLight": "#ffffff",
+      "textLightDimmed": "#bbbbbb",
+      "trainerHeight": "64",
+      "workbenchWidth": "350"
+    },
+    "useCesiumIonBingImagery": true,
+    "welcomeMessageVideo": {
+      "placeholderImage": "https://img.youtube.com/vi/drsCpfCF27M/maxresdefault.jpg",
+      "videoTitle": "Getting started with the map",
+      "videoUrl": "https://www.youtube.com/embed/drsCpfCF27M "
+    }
   }
 }
